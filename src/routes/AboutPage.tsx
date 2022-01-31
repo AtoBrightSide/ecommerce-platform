@@ -43,7 +43,7 @@ const AboutPage = () => {
                 </div>
                 <div className="w-full md:w-1/2">
                     <img
-                        src="src\assets\portrait-two-african-females-holding-shopping-bags-while-reacting-something-their-smartphone 1.png"
+                        src="/portrait-two-african-females-holding-shopping-bags-while-reacting-something-their-smartphone 1.png"
                         alt="portrait-two-african-females-holding-shopping-bags-while-reacting-something-their-smartphone"
                         className="w-full"
                     />

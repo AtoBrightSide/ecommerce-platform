@@ -3,7 +3,7 @@ const SignInPage = () => {
         <>
             <div className="flex flex-col md:flex md:flex-row my-5">
                 <div className="w-full md:w-1/2">
-                    <img src="/src/assets/dl.beatsnoop 1 (1).png" alt="" />
+                    <img src="/dl.beatsnoop 1 (1).png" alt="" />
                 </div>
                 <div className="w-full md:w-1/2 flex flex-col items-center mt-10 md:mt-28 px-5 md:px-0">
                     <div className="flex flex-col space-y-5">

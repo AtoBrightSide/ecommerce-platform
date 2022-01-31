@@ -5,7 +5,7 @@ const SignUpPage = () => {
         <>
             <div className="flex flex-col md:flex md:flex-row my-5">
                 <div className="w-full md:w-1/2">
-                    <img src="/src/assets/dl.beatsnoop 1 (1).png" alt="" />
+                    <img src="/dl.beatsnoop 1 (1).png" alt="" />
                 </div>
                 <div className="w-full md:w-1/2 mt-5 md:mt-28 flex flex-col items-center">
                     <div className="flex flex-col space-y-5">
