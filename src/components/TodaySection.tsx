@@ -304,12 +304,12 @@ const TodaySection = ({ countDownDate }: TodaysSectionProps) => {
 
     return (
         <section className="w-full">
-            <div className="h-[40px] w-full flex items-center gap-x-2 mb-5">
+            <div className="h-[40px] w-full flex items-center gap-x-2 px-2 sm:px-0 md:mb-5">
                 <div className="h-[40px] w-[20px] bg-[#DB4444] rounded-md"></div>
                 <div className="text-[#DB4444] font-bold">Today's</div>
             </div>
-            <div className="flex mb-5">
-                <div className="text-4xl font-semibold">
+            <div className="flex flex-col md:flex md:flex-row mb-5">
+                <div className="text-2xl md:text-4xl font-semibold mb-5 px-2 sm:px-0">
                     Flash Sales
                 </div>
                 <div className="w-80 h-[48px] flex justify-evenly gap-x-2 -mt-5 ml-5">
@@ -333,7 +333,7 @@ const TodaySection = ({ countDownDate }: TodaysSectionProps) => {
                         <div className="text-4xl font-bold">{seconds}</div>
                     </div>
                 </div>
-                <div className="w-[100px] h-[48px] flex -mt-2 ml-auto gap-1">
+                <div className="hidden w-[100px] h-[48px] sm:flex -mt-2 ml-auto gap-1">
                     <div className="w-10 h-10 rounded-full bg-[#F5F5F5] flex justify-center items-center cursor-pointer" onClick={scrollLeft}><i className="fas fa-arrow-left"></i></div>
                     <div className="w-10 h-10 rounded-full bg-[#F5F5F5] flex justify-center items-center cursor-pointer" onClick={scrollRight}><i className="fas fa-arrow-right"></i></div>
                 </div>
@@ -345,7 +345,7 @@ const TodaySection = ({ countDownDate }: TodaysSectionProps) => {
                 )}
             </div>
             <div className="w-full h[56px] flex justify-center">
-                <button className="w-[234px] h-[56px] bg-[#DB4444] text-white flex justify-center items-center rounded-md hover:bg-[#db4444d8] duration-75 ease-in">View All Products</button>
+                <button className="w-44 h-11 md:w-[234px] md:h-[56px] bg-[#DB4444] text-white text-sm md:text-md flex justify-center items-center rounded-md hover:bg-[#db4444d8] duration-75 ease-in">View All Products</button>
             </div>
         </section>
     )

@@ -116,16 +116,16 @@ const products = [
 const ProductSection = () => {
     return (
         <section className="my-10">
-            <div className="h-[40px] w-full flex items-center gap-x-2 mb-5">
+            <div className="h-[40px] w-full flex items-center gap-x-2 md:mb-5 px-2 md:px-0">
                 <div className="h-[40px] w-[20px] bg-[#DB4444] rounded-md"></div>
                 <div className="text-[#DB4444] font-bold">Our Products</div>
             </div>
-            <div className="flex justify-between">
-                <div className="w-full h-[48px] text-4xl font-semibold">
+            <div className="flex justify-between px-2 md:px-0">
+                <div className="w-full h-[48px] text-2xl md:text-4xl font-semibold">
                     Explore Our Products
                 </div>
             </div>
-            <div className="flex flex-wrap justify-center items-center gap-4 mt-5">
+            <div className="relative flex items-center overflow-x-scroll scroll-smooth whitespace-nowrap gap-3 scrollbar-hide p-2 md:flex md:flex-wrap md:justify-center md:items-center md:gap-4 mt-5">
                 {products.map(product => (
                     <Cart item={product} key={product.id} />
                 ))}

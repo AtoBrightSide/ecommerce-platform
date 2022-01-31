@@ -51,16 +51,16 @@ const bestSellingItems = [
 const BestSellingSection = () => {
     return (
         <section className="my-5">
-            <div className="h-[40px] w-full flex items-center gap-x-2 mb-5">
+            <div className="h-[40px] w-full flex items-center gap-x-2 mb-5 px-2 sm:px-0">
                 <div className="h-[40px] w-[20px] bg-[#DB4444] rounded-md"></div>
                 <div className="text-[#DB4444] font-bold">This Month</div>
             </div>
             <div className="flex justify-between">
-                <div className="w-full h-[48px] text-4xl font-semibold">
+                <div className="w-full h-[48px] text-2xl sm:text-4xl font-semibold px-2 sm:px-0">
                     Best Selling Products
                 </div>
                 <div className="w-[159px] h[56px] flex justify-center">
-                    <button className="w-[159px] h-[56px] bg-[#DB4444] text-white flex justify-center items-center rounded-md ease-in duration-75 hover:bg-[#db4444c8]">View All Products</button>
+                    <button className="w-20 h-9 md:w-[159px] md:h-[56px] bg-[#DB4444] text-white text-sm sm:text-md flex justify-center items-center rounded-md ease-in duration-75 hover:bg-[#db4444c8]">View All</button>
                 </div>
             </div>
             <div className="flex flex-wrap justify-center items-center gap-4 mt-5">

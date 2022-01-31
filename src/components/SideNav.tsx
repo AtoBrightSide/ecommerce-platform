@@ -35,8 +35,8 @@ const SideNav = () => {
     }, [])
     return (
         <>
-            <div className="flex mt-[56px] w-full space-x-44 px-56">
-                <div className="hidden w-1/6 sm:flex sm:flex-col border-r-2 border-solid border-[#00000011] gap-y-4">
+            <div className="flex md:mt-[56px] w-full md:space-x-44 md:px-56">
+                <div className="hidden md:w-1/6 sm:flex sm:flex-col border-r-2 border-solid border-[#00000011] gap-y-4">
                     <div className="flex space-x-5 items-center">
                         <div>Women's Fashion</div>
                         <i className="fas fa-chevron-right mr-2"></i>
@@ -54,8 +54,8 @@ const SideNav = () => {
                     <div>Health & Beauty</div>
                 </div>
 
-                <div className="flex flex-col items-center w-3/5 h-96">
-                    <div className="w-[1000px] h-[600px] bg-center bg-cover duration-500"
+                <div className="w-full md:w-3/5 h-96 flex flex-col items-center">
+                    <div className="w-screen h-screen md:w-[1000px] md:h-[600px] bg-center bg-cover duration-500"
                         style={{ backgroundImage: `url(${data[currentIndex].src})` }}>
                     </div>
                     <div className="flex -mt-4 justify-center">

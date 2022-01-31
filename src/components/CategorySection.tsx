@@ -15,13 +15,13 @@ const CategorySection = () => {
         setSelectedCategoryIndex(index)
     }
     return (
-        <section className="py-5 border-b-2 border-solid my-5 flex flex-col space-y-5">
-            <div className="h-[40px] w-full flex items-center gap-x-2 mb-5">
+        <section className="py-5 border-b-2 border-solid my-5 flex flex-col space-y-2 sm:space-y-5">
+            <div className="h-[40px] w-full flex items-center gap-x-2 sm:mb-5 px-2 sm:px-0">
                 <div className="h-[40px] w-[20px] bg-[#DB4444] rounded-md"></div>
                 <div className="text-[#DB4444] font-bold">Categories</div>
             </div>
-            <div className="flex">
-                <div className="w-full h-[48px] text-4xl font-semibold">
+            <div className="flex px-2 sm:px-0">
+                <div className="w-full h-[48px] text-2xl sm:text-4xl font-semibold">
                     Browse By Category
                 </div>
             </div>

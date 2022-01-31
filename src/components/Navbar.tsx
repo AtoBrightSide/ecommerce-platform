@@ -1,40 +1,53 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom"
 import { ItemContext } from "../providers/ItemProvider";
 
 const Navbar = () => {
     const { itemCount } = useContext(ItemContext)
+    const [activeIndex, setActiveIndex] = useState<number>(0);
+
     return (
         <>
-            <nav className="flex justify-between w-full mt-[40px] px-56">
+            <nav className="w-full flex flex-col items-center py-5 md:py-0 md:mt-[40px] md:px-56 md:flex md:flex-row md:justify-between">
                 <Link to="/home">
                     <div className="flex gap-1">
                         <img src="/ecommerce-svgrepo-com (4).svg" alt="" className="w-8" />
-                        <div className="font-bold text-3xl my-auto">
+                        <div className="font-bold text-lg sm:text-3xl my-auto">
                             Everyone Shops
                         </div>
                     </div>
                 </Link>
-                <div className="flex space-x-5 items-center text-lg">
-                    <div className="hover:underline cursor-pointer duration-300 ease-in">
-                        <Link to="/home">Home</Link>
+                <div className="w-full md:w-2/4 flex  md:flex md:justify-center my-5 md:my-0 space-x-5 items-center text-lg">
+                    <div className="w-1/4 md:w-max flex justify-center hover:underline cursor-pointer duration-300 ease-in">
+                        <Link to="/home" onClick={() => setActiveIndex(0)}>
+                            <div className={`hidden sm:inline ${activeIndex === 0 ? 'text-[#DB4444]' : ''}`}>Home</div>
+                            <i className={`fas fa-home text-2xl md:hidden ${activeIndex === 0 ? 'text-[#DB4444]' : ''}`}></i>
+                        </Link>
                     </div>
-                    <div className="hover:underline cursor-pointer duration-300 ease-in">
-                        <Link to="/contactus">Contact</Link>
+                    <div className="w-1/4 md:w-max flex justify-center hover:underline cursor-pointer duration-300 ease-in">
+                        <Link to="/contactus" onClick={() => setActiveIndex(1)}>
+                            <div className={`hidden sm:inline ${activeIndex === 1 ? 'text-[#DB4444]' : ''}`}>Contact</div>
+                            <i className={`fas fa-id-badge text-2xl md:hidden ${activeIndex === 1 ? 'text-[#DB4444]' : ''}`}></i>
+                        </Link>
                     </div>
-                    <div className="hover:underline cursor-pointer duration-300 ease-in">
-                        <Link to="/about">About</Link>
+                    <div className="w-1/4 md:w-max flex justify-center hover:underline cursor-pointer duration-300 ease-in">
+                        <Link to="/about" onClick={() => setActiveIndex(2)}>
+                            <div className={`hidden sm:inline ${activeIndex === 2 ? 'text-[#DB4444]' : ''}`}>About</div>
+                            <i className={`far fa-address-card text-2xl md:hidden ${activeIndex === 2 ? 'text-[#DB4444]' : ''}`}></i>
+                        </Link>
                     </div>
-                    <div className="hover:underline cursor-pointer duration-300 ease-in">
-                        <Link to="/signup">Sign Up</Link>
+                    <div className="w-1/4 md:w-max flex justify-center hover:underline cursor-pointer duration-300 ease-in">
+                        <Link to="/signup" onClick={() => setActiveIndex(3)}>
+                            <div className={`hidden sm:inline ${activeIndex === 3 ? 'text-[#DB4444]' : ''}`}>Sign Up</div>
+                            <i className={`fas fa-user-plus text-2xl md:hidden ${activeIndex === 3 ? 'text-[#DB4444]' : ''}`}></i>
+                        </Link>
                     </div>
                 </div>
-                <div className="flex items-center">
+                <div className="w-full md:w-max px-5 flex justify-between items-center">
                     <div className="bg-[#F5F5F5] p-2 mb-1 rounded-md">
                         <input type="text" placeholder="What are you looking for?" className="bg-inherit outline-none" />
                         <i className="fas fa-search text-lg cursor-pointer"></i>
                     </div>
-                    <i className="far fa-heart ml-5 text-2xl"></i>
                     <Link to="/wishlist">
                         <div className="relative">
                             <i className="fas fa-shopping-cart ml-5 text-2xl"></i>

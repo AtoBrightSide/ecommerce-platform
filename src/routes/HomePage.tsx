@@ -10,7 +10,7 @@ const HomePage = () => {
         <>
             <SideNav />
 
-            <div className="w-full mt-[140px] px-56">
+            <div className="w-full mt-[140px] md:px-56">
                 <TodaySection countDownDate={new Date("Jul 10, 2024 15:37:25").getTime()} />
 
                 <CategorySection />
