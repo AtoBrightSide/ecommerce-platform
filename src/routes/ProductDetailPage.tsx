@@ -26,8 +26,8 @@ const ProductDetailPage = () => {
     }
 
     return (
-        <div className="flex w-full h-full px-56 my-10 gap-x-5">
-            <div className="w-2/3 flex gap-x-3">
+        <div className="flex flex-col md:flex md:flex-row w-full h-full px-5 md:px-56 my-10 gap-x-5">
+            <div className="w-full md:w-2/3 flex gap-x-3">
                 <div className="w-1/5 flex flex-col items-center gap-y-2">
                     <img src={item.img} alt="" className="w-full h-full object-scale-down" />
                     <img src={item.img} alt="" className="w-full h-full object-scale-down" />
@@ -38,15 +38,15 @@ const ProductDetailPage = () => {
                     <img src={item.img} alt="" className="w-full h-full" />
                 </div>
             </div>
-            <div className="w-1/3 flex flex-col gap-y-2">
-                <div className="text-3xl font-semibold">{item.name}</div>
+            <div className="w-full md:w-1/3 flex flex-col mt-5 md:mt-0 gap-y-2">
+                <div className="text-2xl md:text-3xl font-semibold">{item.name}</div>
                 <div className="flex gap-x-1">
                     <div className="flex gap-x-1">
                         {Array.from([1, 2, 3, 4, 5]).map((_, idx) => (
                             <i className={`fas fa-star text-sm ${idx + 1 <= item.stars ? 'text-[#FFAD33]' : ''}`} key={idx}></i>
                         ))}
                     </div>
-                    <div className="flex">
+                    <div className="flex text-sm md:text-base">
                         ({item.review_count} reviews)
                     </div>
                 </div>
